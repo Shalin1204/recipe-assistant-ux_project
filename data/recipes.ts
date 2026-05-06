@@ -1,6 +1,6 @@
 import { Recipe } from '../types/recipe';
 
-export const recipes: Recipe[] = [
+export let recipes: Recipe[] = [
   {
     id: '1',
     title: 'Samosa',
@@ -259,3 +259,7 @@ export const recipes: Recipe[] = [
     ],
   },
 ];
+
+export const addRecipe = (recipe: Recipe) => {
+  recipes.push(recipe);
+};

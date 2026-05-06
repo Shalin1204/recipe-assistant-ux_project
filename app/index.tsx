@@ -2,6 +2,7 @@
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button } from '../components/Button';
 import { RecipeCard } from '../components/RecipeCard';
 import { SearchBar } from '../components/SearchBar';
 import { recipes } from '../data/recipes';
@@ -26,6 +27,7 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Recipe Assistant</Text>
+          <Button title="Add" onPress={() => router.push('/add-recipe')} />
         </View>
 
         <View style={styles.searchContainer}>
